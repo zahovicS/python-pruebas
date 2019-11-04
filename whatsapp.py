@@ -29,26 +29,22 @@ nombre = input('Ingrese el nombre de usuario o el nombre del grupo: ')
 
 user = driver.find_element_by_xpath('//span[@title="{}"]'.format(nombre))
 user.click()
-if ojo =="si":
-    if opcion == 1:
-        #enviar un mensaje
-        print('=== Haz elegido enviar un mensaje ===')
-        mensaje = input('Ingrese el mensaje: ')
-        count = int(input('Ingrese el numero de mensajes a enviar: '))
-        msg_box = driver.find_element_by_class_name('_13mgZ')
-        input('presione Enter despues de escanear el codigo QR')
-        enviar_Mensaje(mensaje,count)
-        
-    elif opcion ==2:
-        #enviar un archivo
-        print('=== Haz elegido enviar un archivo de imagen/video ===')
-        rutaArchivo = input('Ingrese la ruta del archivo a enviar(imagenes/video): ')
-        count = int(input('Ingrese el numero de veces a enviar: '))
-        btnAdjuntar = driver.find_element_by_xpath('//div[@title="Adjuntar"]')
-        input('presione Enter despues de escanear el codigo QR')
-        enviar_Multimedia(btnAdjuntar,rutaArchivo,count)
-    else:
-        Print('Error :(')
-        sys.exit()
+if opcion == 1:
+    #enviar un mensaje
+    print('=== Haz elegido enviar un mensaje ===')
+    mensaje = input('Ingrese el mensaje: ')
+    count = int(input('Ingrese el numero de mensajes a enviar: '))
+    msg_box = driver.find_element_by_class_name('_13mgZ')
+    input('presione Enter despues de escanear el codigo QR')
+    enviar_Mensaje(mensaje,count) 
+elif opcion ==2:
+    #enviar un archivo
+    print('=== Haz elegido enviar un archivo de imagen/video ===')
+    rutaArchivo = input('Ingrese la ruta del archivo a enviar(imagenes/video): ')
+    count = int(input('Ingrese el numero de veces a enviar: '))
+    btnAdjuntar = driver.find_element_by_xpath('//div[@title="Adjuntar"]')
+    input('presione Enter despues de escanear el codigo QR')
+    enviar_Multimedia(btnAdjuntar,rutaArchivo,count)
 else:
-    Print('Error :(')
+    print('Error :(')
+    sys.exit()

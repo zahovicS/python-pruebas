@@ -1,0 +1,10 @@
+instalar pip de visual code
+#opcional
+Abrir cmd y escribir:
+ python get-pip.py
+#instalar selenium
+abrir cmd y escribir:
+ pip install -U selenium
+si sale error ir a la siguiente ruta:
+ C:\Users\Usuario\AppData\Local\Programs\Python\Python38-32\Scripts
+	y escribir lo anterior (pip install -U selenium)
